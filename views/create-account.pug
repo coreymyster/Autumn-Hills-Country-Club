@@ -1,0 +1,10 @@
+extends base.pug
+
+block content
+    form(action="/success", method="post")
+        input(type="text", name="id")
+        input(type="text", name="last")
+        input(type="text", name="first")
+        input(type="text", name="address")
+        input(type="text", name="city")
+        input(type="submit", name="Done")
