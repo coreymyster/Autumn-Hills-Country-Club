@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./services/dbconnection-service')
 const createAccountService = require('./services/login_service');
+const port = process.env.PORT || 3000;
+
 
 db;
 
@@ -78,6 +80,6 @@ app.post('/success', (req, res) => {
     //return response.send(request.body);*/
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
  console.log("Server running on port 3000");
 });
