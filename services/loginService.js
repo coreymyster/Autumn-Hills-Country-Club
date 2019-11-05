@@ -2,8 +2,8 @@ const db = require('./dbconnection-service');
 
 db;
 
-var d = new Date();
-var n = d.getHours();
+let d = new Date();
+let hours = d.getHours();
 
 function login(req, res) {
     let email = req.body.email
@@ -16,19 +16,19 @@ function login(req, res) {
                 <p>Don't have an account? <a href="/create-account">Create an account</a> for free!</p>
                 `);
         } else {
-            if(n < 12) {
+            if(hours < 12) {
             res.send(`
                 <div>
                     <h1>Good morning ${result[0].FirstName} ${result[0].LastName}</h1>
                 </div>
             `);
-            } else if(n >= 12 && n < 5) {
+            } else if(hours >= 12 && hours < 5) {
                 res.send(`
                     <div>
                         <h1>Good afternoon ${result[0].FirstName} ${result[0].LastName}</h1>
                     </div>
                 `);
-                } else if(n >= 5) {
+                } else if(hours >= 5) {
                     res.send(`
                         <div>
                             <h1>Good evening ${result[0].FirstName} ${result[0].LastName}</h1>

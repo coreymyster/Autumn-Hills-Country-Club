@@ -2,8 +2,10 @@ extends base.pug
 
 block content
     form(action="/dashboard", method="post")
-        p Email: 
-            input(type="text", name="email")
-        p Password: 
-            input(type="text", name="password")
+        p Email
+            br
+            input(type="text", name="email" size="50")
+        p Password 
+            br
+            input(type="text", name="password" size="50")
         input(type="submit", name="Done")

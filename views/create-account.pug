@@ -2,18 +2,25 @@ extends base.pug
 
 block content
     form(action="/success", method="post")
-        p First Name: 
+        p First Name 
+            br
             input(type="text", name="first")
-        p Last Name: 
+        p Last Name
+            br
             input(type="text", name="last")
-        p Email Address: 
+        p Email Address 
+            br
             input(type="text", name="email")
-        p Address: 
+        p Address 
+            br
             input(type="text", name="address")
-        p City: 
+        p City
+            br
             input(type="text", name="city")
-        p State: 
+        p State
+            br
             input(type="text", name="state")
-        p Create a Password:    
+        p Create a Password 
+            br
             input(type="text", name="password")
         input(type="submit", name="Done")
