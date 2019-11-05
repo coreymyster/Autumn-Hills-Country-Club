@@ -1,0 +1,9 @@
+extends base.pug
+
+block content
+    form(action="/dashboard", method="post")
+        p Email: 
+            input(type="text", name="email")
+        p Password: 
+            input(type="text", name="password")
+        input(type="submit", name="Done")
