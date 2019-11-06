@@ -1,9 +1,23 @@
-@primary-color: red;
+@primary-background: #f2e6d8;
+@blue-acccent: #4c6473;
 
 h1 {
     font-size: 30px;
 }
 
-body {
-    background: @primary-color;
+.login {
+    background: @primary-background;
+    padding: 30px;
+    text-align: center;
+
+    p {
+        padding: 10px;
+    }
+
+    input {
+        border-radius: 10px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-color: @blue-acccent;
+    }
 }
