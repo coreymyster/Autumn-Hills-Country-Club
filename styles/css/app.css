@@ -22,11 +22,15 @@ h1 {
   box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.42);
 }
 .login img {
-  width: 60%;
+  width: 50%;
 }
 .login p {
   padding: 10px;
   font-size: 18px;
+}
+.login p a {
+  font-size: 13px;
+  color: #4c6473;
 }
 .login input[type="text"] {
   border-radius: 10px;

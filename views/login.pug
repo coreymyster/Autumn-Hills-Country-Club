@@ -1,11 +1,17 @@
 extends base.pug
 
 block content
-    form(action="/dashboard", method="post")
-        p Email
-            br
-            input(type="text", name="email" size="50")
-        p Password 
-            br
-            input(type="text", name="password" size="50")
-        input(type="submit", name="Done")
+    div(class="login-wrapper")
+        div(class="login")
+            form(action="/dashboard", method="post")
+                p 
+                    img(src="./images/autumn-hills-logo.svg")
+                p Email
+                    br
+                    input(type="text", name="email" size="50" height="20")
+                p Password 
+                    br
+                    input(type="text", name="password" size="50" height="20")
+                p 
+                    a(href="/create-account") Don't have an account?
+                input(type="submit", name="Done")

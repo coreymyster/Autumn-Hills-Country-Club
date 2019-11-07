@@ -12,10 +12,12 @@ db;
 const app = express();
 
 
+
 // Middleware
 
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'))
 
 
 app.get('/', (req, res) => {
