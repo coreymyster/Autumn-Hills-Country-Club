@@ -6,22 +6,23 @@
 
 @font: 'Hind', sans-serif;
 
+// *** MOBILE VIEW ***
+
+
+
+/* ----------- BEGIN LOGIN FORM ----------- */
 .login-wrapper {
     text-align: center;
     //display: grid;
     //grid-template-columns: 50%;
    position: absolute;
    top: 10%;
-   left: 25%;
-   width: 50%;
+   left: 10%;
+   width: 80%;
    font-family: @font;
    font-weight: 500;
    color: @darkGreen;
 
-}
-
-h1 {
-    font-size: 30px;
 }
 
 .login {
@@ -29,14 +30,14 @@ h1 {
     border-style:solid;
     border-color: @green;
     border-width: 3px;
-    padding: 30px;
+    padding: 5px;
     //text-align: center;
     -webkit-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.42);
     -moz-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.42);
     box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.42);
 
     img {
-        width: 50%;
+        width: 70%;
     }
 
     p {
@@ -49,13 +50,15 @@ h1 {
         }
     }
 
-    input[type="text"] {
+    input[type="text"], input[type="password"] {
         border-radius: 10px;
         border-width: 2px;
         padding: 10px 5px;
         border-style: solid;
         border-color: @blue-acccent;
         font-size: 16px;
+        width: 85%;
+        text-align: center;
     }
 
     input[type="submit"] {
@@ -69,3 +72,53 @@ h1 {
         font-size: 16px;
     }
 }
+/* ----------- END LOGIN FORM ----------- */
+
+// *** TABLET VIEW ***
+
+@media only screen and (min-width: 768px) {
+
+
+
+/* ----------- BEGIN LOGIN FORM ----------- */
+
+    .login-wrapper {
+        top: 5%;
+    }
+    
+    .login {
+        img {
+            width: 60%;
+        }
+    }
+/* ----------- END LOGIN FORM ----------- */
+
+
+}
+
+
+// *** DESKTOP VIEW ***
+
+@media only screen and (min-width: 1020px) {
+
+
+
+/* ----------- BEGIN LOGIN FORM ----------- */
+    .login-wrapper {
+       top: 10%;
+       left: 25%;
+       width: 50%;
+    }
+    
+    .login {
+        padding: 30px;
+           
+        img {
+            width: 50%;
+        }
+    }
+/* ----------- END LOGIN FORM ----------- */
+
+
+}
+
