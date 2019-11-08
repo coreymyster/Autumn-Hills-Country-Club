@@ -74,6 +74,26 @@
 }
 /* ----------- END LOGIN FORM ----------- */
 
+
+
+/* ------ BEGIN CREATE ACCOUNT FORM ------ */
+
+
+
+
+/* ------ END CREATE ACCOUNT FORM ------ */
+
+
+
+// END MOBILE VIEW
+
+//
+//
+//
+//
+//
+//
+
 // *** TABLET VIEW ***
 
 @media only screen and (min-width: 768px) {
@@ -94,8 +114,24 @@
 /* ----------- END LOGIN FORM ----------- */
 
 
-}
 
+
+/* ------ BEGIN CREATE ACCOUNT FORM ------ */
+
+
+
+
+/* ------ END CREATE ACCOUNT FORM ------ */
+
+
+} // END TABLET VIEW
+
+//
+//
+//
+//
+//
+//
 
 // *** DESKTOP VIEW ***
 
@@ -120,5 +156,59 @@
 /* ----------- END LOGIN FORM ----------- */
 
 
+
+
+/* ------ BEGIN CREATE ACCOUNT FORM ------ */
+.create-account {
+    //padding: 5% 15% 0 15%;
+    font-family: @font;
+    font-weight: 500;
+    color: @darkGreen;
+    position: absolute;
+    top: 10%;
+    left: 25%;
 }
 
+.create-account-form-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    p {
+        font-size: 18px;
+
+        a {
+            font-size: 13px;
+            color: @blue-acccent;
+        }
+    }
+}
+
+
+
+input[type="text"], input[type="password"] {
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-color: @blue-acccent;
+    font-size: 16px;
+    width: 85%;
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px 35px;
+    border-style: solid;
+    background: @blue-acccent;
+    color: @offWhite;
+    border-color: @offWhite;
+    font-size: 16px;
+}
+
+
+
+/* ------ END CREATE ACCOUNT FORM ------ */
+
+
+} // END DESKTOP VIEW

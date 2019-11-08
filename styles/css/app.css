@@ -52,6 +52,8 @@
   font-size: 16px;
 }
 /* ----------- END LOGIN FORM ----------- */
+/* ------ BEGIN CREATE ACCOUNT FORM ------ */
+/* ------ END CREATE ACCOUNT FORM ------ */
 @media only screen and (min-width: 768px) {
   /* ----------- BEGIN LOGIN FORM ----------- */
   .login-wrapper {
@@ -61,6 +63,8 @@
     width: 60%;
   }
   /* ----------- END LOGIN FORM ----------- */
+  /* ------ BEGIN CREATE ACCOUNT FORM ------ */
+  /* ------ END CREATE ACCOUNT FORM ------ */
 }
 @media only screen and (min-width: 1020px) {
   /* ----------- BEGIN LOGIN FORM ----------- */
@@ -76,4 +80,45 @@
     width: 50%;
   }
   /* ----------- END LOGIN FORM ----------- */
+  /* ------ BEGIN CREATE ACCOUNT FORM ------ */
+  .create-account {
+    font-family: 'Hind', sans-serif;
+    font-weight: 500;
+    color: #54592e;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+  }
+  .create-account-form-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .create-account-form-wrapper p {
+    font-size: 18px;
+  }
+  .create-account-form-wrapper p a {
+    font-size: 13px;
+    color: #4c6473;
+  }
+  input[type="text"],
+  input[type="password"] {
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-color: #4c6473;
+    font-size: 16px;
+    width: 85%;
+  }
+  input[type="submit"] {
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px 35px;
+    border-style: solid;
+    background: #4c6473;
+    color: #f2e6d8;
+    border-color: #f2e6d8;
+    font-size: 16px;
+  }
+  /* ------ END CREATE ACCOUNT FORM ------ */
 }
