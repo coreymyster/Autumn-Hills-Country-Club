@@ -1,0 +1,119 @@
+    body {
+        font-family: 'Hind', sans-serif;
+        color: #262626;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-family: 'Cormorant Garamond', serif;
+        color: #54592e;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: #8a8c42;
+        font-family: 'Hind', sans-serif;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-family: 'Hind', sans-serif;
+        color: #4c6473;
+    }
+
+    button {
+        background-color: #4c6473;
+        border-radius: 5px;
+        padding: 10px;
+        color: #f2e6d8;
+    }
+
+    .inputLabel {
+        font-size: 14px;
+        font-weight: bold;
+        color: #262626;
+    }
+
+    input.inputField {
+        padding: 5px;
+        border: 1px solid #f2e6d8;
+    }
+
+    #checkbox {
+      margin: 10px;
+    }
+
+    label {
+      color: #262626;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    div.box {
+        height: 100px;
+        width: 100px;
+        display: inline-block;
+        margin: 0 10px 0 10px;
+    }
+
+    #primary1 {
+        background-color: #54592e;
+    }
+
+    #primary2 {
+        background-color: #4c6473;
+    }
+
+    #primary3 {
+        background-color: #8a8c42;
+    }
+
+    #primary4 {
+        background-color: #d97c0b;
+    }
+
+    #primary5 {
+      background-color: #f2e6d8;
+    }
+
+    .warning {
+        background-color: #F2EC78;
+        font-weight: bold;
+        color: black;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .danger {
+        background-color: #ED4434;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .success {
+        background-color: #40B923;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    svg.svg-inline--fa {
+        color: white;
+    }
+
+    .spacer {
+        margin-top: 25px;
+    }
+
+    #footer {
+        border-top: 1px solid #dddddd;
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
+    }
+    a {
+      color: #068587;
+    }
