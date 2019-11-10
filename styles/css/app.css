@@ -81,20 +81,36 @@
   }
   /* ----------- END LOGIN FORM ----------- */
   /* ------ BEGIN CREATE ACCOUNT FORM ------ */
+  h1 {
+    padding-left: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    color: #54592e;
+  }
   .create-account {
     font-family: 'Hind', sans-serif;
     font-weight: 500;
     color: #54592e;
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 25%;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: #8a8c42;
+    border-width: 3px;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.42);
   }
   .create-account-form-wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
+    padding: 20px;
   }
   .create-account-form-wrapper p {
     font-size: 18px;
+    padding: 0 80px 0 40px;
   }
   .create-account-form-wrapper p a {
     font-size: 13px;
@@ -104,11 +120,11 @@
   input[type="password"] {
     border-radius: 10px;
     border-width: 2px;
-    padding: 10px 5px;
+    padding: 10px 20px;
     border-style: solid;
     border-color: #4c6473;
     font-size: 16px;
-    width: 85%;
+    width: 100%;
   }
   input[type="submit"] {
     border-radius: 10px;
