@@ -14,11 +14,26 @@ function createAcount(req, res) {
     let sql = "INSERT INTO UserStore VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     db.query(sql, [id, fname, lname, email, address, city, state, password], (err, result) => {
         if(err) {
-            res.send("User does not exist");
+            res.send(`
+            <!DOCTYPE html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
+            </head>
+            <div class="acccountCreateMessage">
+                <img src="./images/autumn-hills-logo.svg"/>
+                <p><a href="/create-account">An error occcured. Please try again.</a></p>
+            </div>
+        `);
         } else {
             res.send(`
-                <div>
+                <!DOCTYPE html>
+                <head>
+                    <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
+                </head>
+                <div class="acccountCreateMessage">
+                    <img src="./images/autumn-hills-logo.svg"/>
                     <h1>Thanks for registering!</h1>
+                    <p><a href="/login">Log in to your account.</a></p>
                 </div>
             `);
         }
