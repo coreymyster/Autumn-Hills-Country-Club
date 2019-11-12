@@ -173,6 +173,7 @@ input[type="submit"] {
   .acccountCreateMessage h1 {
     color: #54592e;
     font-family: 'Hind', sans-serif;
+    text-align: center;
   }
   .acccountCreateMessage p {
     padding: 10px;
@@ -183,7 +184,7 @@ input[type="submit"] {
     color: #4c6473;
   }
   .acccountCreateMessage img {
-    width: 20%;
+    width: 40%;
   }
   /* -------- END ACCOUNT CREATION MESSAGE -------- */
 }

@@ -1,0 +1,14 @@
+extends base.pug
+
+block content
+    div(class="tee-time-wrapper")
+        div(class="tee-times")
+            form(action="/tee-time-confirmation", method="post")
+                p Date
+                    br
+                    input(type="date", name="date")
+                p Time 
+                    br
+                    input(type="time", name="time")
+        
+                input(type="submit", name="Register" value="Register")

@@ -4,6 +4,8 @@ const db = require('./services/dbconnection-service')
 const createAccountService = require('./services/createAccountService');
 const loginService = require('./services/loginService');
 const port = process.env.PORT || 3000;
+const userData = require('./services/userDataService');
+
 
 
 db;
@@ -38,6 +40,10 @@ app.get('/create-account', (req, res) => {
 
 app.get('/login', (req, res) => {
     return res.render('login');
+});
+
+app.get('/tee-times', (req, res) => {
+    return res.render('tee-times');
 });
 
 app.get('/submit-form-with-get', (req, res) => {
@@ -109,6 +115,28 @@ app.post('/dashboard', (req, res) => {
          }
      });
      //return response.send(request.body);*/
+     console.log(userData);
+ });
+
+ app.post('/tee-times', (req, res) => {
+     let UserID = userData.ID
+     let Email = userData.Email
+     let date = req.body.date
+     let time = req.body.time
+     let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?)";
+     db.query(sql, [id, lname, fname, address, city], (err, result) => {
+         if(err) {
+             res.send("User does not exist");
+         } else {
+             res.send(`
+                 <div>
+                     <h1>Thanks for registering!</h1>
+                 </div>
+             `);
+         }
+     });
+     //return response.send(request.body);*/
+     console.log(userData);
  });
 
 app.listen(port, () => {
