@@ -4,8 +4,6 @@ const db = require('./services/dbconnection-service')
 const createAccountService = require('./services/createAccountService');
 const loginService = require('./services/loginService');
 const port = process.env.PORT || 3000;
-const userData = require('./services/userDataService');
-
 
 
 db;
@@ -24,6 +22,14 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     return res.render('home');
+});
+
+app.get('/dashboard', (req, res) => {
+    ID = req.app.get("ID");
+    FirstName = req.app.get("FirstName");
+    Email = req.app.get("Email");
+    console.log(Email);
+    return res.render('dashboard');
 });
 
 app.get('/form-with-get', (req, res) => {
@@ -115,12 +121,9 @@ app.post('/dashboard', (req, res) => {
          }
      });
      //return response.send(request.body);*/
-     console.log(userData);
  });
 
  app.post('/tee-times', (req, res) => {
-     let UserID = userData.ID
-     let Email = userData.Email
      let date = req.body.date
      let time = req.body.time
      let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?)";
@@ -136,7 +139,6 @@ app.post('/dashboard', (req, res) => {
          }
      });
      //return response.send(request.body);*/
-     console.log(userData);
  });
 
 app.listen(port, () => {
