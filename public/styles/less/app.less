@@ -81,13 +81,6 @@
 
 /* ------ BEGIN CREATE ACCOUNT FORM ------ */
 
-h1 {
-    font-family: @header;
-    font-size: 30px;
-    color: @darkGreen;
-    text-align: center;
-}
-
 .create-account {
     //padding: 5% 15% 0 15%;
     font-family: @font;
@@ -106,6 +99,13 @@ h1 {
     -moz-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.42);
     box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.42);
     width: 91%;
+
+    h1 {
+        font-family: @header;
+        font-size: 30px;
+        color: @darkGreen;
+        text-align: center;
+    }
 
 }
 
@@ -189,14 +189,13 @@ input[type="submit"] {
 
 /* ------ BEGIN CREATE ACCOUNT FORM ------ */
 
-h1 {
-    padding-left: 10px;
-    text-align: left;
-}
-
 .create-account {
     //padding: 5% 15% 0 15%;
     width: 88%;
+    h1 {
+        padding-left: 10px;
+        text-align: left;
+    }
 }
 
 .create-account-form-wrapper {
@@ -249,13 +248,13 @@ h1 {
 
 /* ------ BEGIN CREATE ACCOUNT FORM ------ */
 
-h1 {
-    font-size: 40px;
-}
-
 .create-account {
     left: 15%;
     width: 70%;
+
+    h1 {
+        font-size: 40px;
+    }
 
 }
 
@@ -302,6 +301,62 @@ h1 {
 }
 
 /* -------- END ACCOUNT CREATION MESSAGE -------- */
+
+
+
+
+
+/* -------- BEGIN DASHBOARD PAGE -------- */
+
+.dashboard {
+    left: 10%;
+    font-family: @font;
+    position: relative;
+        img {
+            width: 25%;
+        }
+
+        h2 {
+            padding: 100px 0 0 40px;
+            font-size: 28px;
+            color: @green;
+        }
+
+        .reservations {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 80%;
+            
+
+            .teeTimes,.restaurant {
+                border-radius: 10px;
+                border-width: 2px;
+                padding: 10px 20px;
+                margin: 30px;
+                height: 250px;
+                border-style: solid;
+                border-color: @blue-acccent;
+                font-size: 16px;
+
+                h3 {
+                    color: @blue-acccent;
+                    padding: 10px 0;
+                }
+
+                
+                p {
+                    padding: 5px 0;
+
+                    a {
+                        color: @blue-acccent;
+                    }
+                }
+            }
+        }
+}
+
+/* -------- BEGIN DASHBOARD PAGE -------- */
+
 
 
 } // END DESKTOP VIEW

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const db = require('./services/dbconnection-service')
 const createAccountService = require('./services/createAccountService');
 const loginService = require('./services/loginService');
+const getTeeTimesService = require('./services/getTeeTimesService');
 const port = process.env.PORT || 3000;
 
 
@@ -28,7 +29,8 @@ app.get('/dashboard', (req, res) => {
     ID = req.app.get("ID");
     FirstName = req.app.get("FirstName");
     Email = req.app.get("Email");
-    console.log(Email);
+    TTDate = req.app.get("TTDate");
+    TTTime = req.app.get("TTTime");
     return res.render('dashboard');
 });
 
@@ -103,7 +105,10 @@ app.post('/success', (req, res) => {
 
 app.post('/dashboard', (req, res) => {
     loginService(req, res); //Delete only this line incase I need to revert
-     /*let id = req.body.id
+    ID = req.app.get("ID");
+    //console.log(req.app.get("ID"));
+    //getTeeTimesService(req, res);
+    /*let id = req.body.id
      let lname = req.body.last
      let fname = req.body.first
      let address = req.body.address

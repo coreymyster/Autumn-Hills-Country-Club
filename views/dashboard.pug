@@ -1,7 +1,18 @@
 extends base.pug
 
 block content
-    div(class="login-wrapper")
-        div(class="login")
-            h1 Good evening #{FirstName}
-            p Your ID is #{ID}
+    div(class="dashboard")
+        p 
+            img(src="./images/autumn-hills-logo.svg")
+        h2 Good evening #{FirstName}
+        div(class="reservations")
+            div(class="teeTimes")
+                h3
+                    b Upcoming Tee Times
+                p=TTDate
+                p=TTTime
+                p
+                    a(href="/tee-times") Book a Tee Time
+            //div(class="restaurant")
+                p No new items
+

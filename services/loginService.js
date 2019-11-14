@@ -1,4 +1,6 @@
 const db = require('./dbconnection-service');
+const getTeeTimesService = require('./getTeeTimesService');
+
 
 db;
 
@@ -20,6 +22,7 @@ function login(req, res) {
             res.app.set("ID", result[0].UserID);
             res.app.set("FirstName", result[0].FirstName);  
             res.app.set("Email", result[0].Email);
+            getTeeTimesService(req, res, result[0].UserID);
             /*if(hours < 12) {
             res.send(`
                 <div>
