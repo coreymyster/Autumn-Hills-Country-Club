@@ -54,6 +54,11 @@ app.get('/tee-times', (req, res) => {
     return res.render('tee-times');
 });
 
+app.get('/tee-times-confirmation', (req, res) => {
+    ID = req.app.get("ID");
+    Email = req.app.get("Email");
+});
+
 app.get('/submit-form-with-get', (req, res) => {
     return res.send(req.query);
 });
@@ -105,7 +110,10 @@ app.post('/success', (req, res) => {
 
 app.post('/dashboard', (req, res) => {
     loginService(req, res); //Delete only this line incase I need to revert
-    ID = req.app.get("ID");
+    
+    //ID = req.app.get("ID");
+    //console.log();
+    
     //console.log(req.app.get("ID"));
     //getTeeTimesService(req, res);
     /*let id = req.body.id
@@ -128,11 +136,15 @@ app.post('/dashboard', (req, res) => {
      //return response.send(request.body);*/
  });
 
- app.post('/tee-times', (req, res) => {
-     let date = req.body.date
+ app.post('/tee-time-confirmation', (req, res) => {
+    let TTID = '';
+    let UserID = req.app.get("ID"); 
+    let date = req.body.date
      let time = req.body.time
-     let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?)";
-     db.query(sql, [id, lname, fname, address, city], (err, result) => {
+     let Email = req.app.get("Email");
+     let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?, ?)";
+     console.log(UserID)
+     db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
          if(err) {
              res.send("User does not exist");
          } else {

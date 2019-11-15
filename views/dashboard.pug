@@ -1,6 +1,7 @@
 extends base.pug
 
 block content
+
     div(class="dashboard")
         p 
             img(src="./images/autumn-hills-logo.svg")
@@ -9,8 +10,7 @@ block content
             div(class="teeTimes")
                 h3
                     b Upcoming Tee Times
-                p=TTDate
-                p=TTTime
+                p On #{TTDate} at #{TTTime}
                 p
                     a(href="/tee-times") Book a Tee Time
             //div(class="restaurant")

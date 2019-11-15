@@ -18,11 +18,11 @@ function login(req, res) {
                 <p>Don't have an account? <a href="/create-account">Create an account</a> for free!</p>
                 `);
         } else {
-            res.redirect('/dashboard');
             res.app.set("ID", result[0].UserID);
             res.app.set("FirstName", result[0].FirstName);  
             res.app.set("Email", result[0].Email);
             getTeeTimesService(req, res, result[0].UserID);
+            //res.redirect('/dashboard');
             /*if(hours < 12) {
             res.send(`
                 <div>
