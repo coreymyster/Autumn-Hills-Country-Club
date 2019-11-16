@@ -156,11 +156,8 @@ app.post('/dashboard', (req, res) => {
          if(err) {
              res.send("User does not exist");
          } else {
-             res.send(`
-                 <div>
-                     <h1>Thanks for registering!</h1>
-                 </div>
-             `);
+            getTeeTimesService(req, res, UserID);
+
          }
      });
      //return response.send(request.body);*/

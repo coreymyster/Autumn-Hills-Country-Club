@@ -31,10 +31,7 @@ block content
                     else
                         - hourOfDay = "am";
                     
-                    if TeeTime[i].Date == "" && TeeTime[i].Time == ""
-                        p No tee times currently scheduled
-                    else
-                        p On #{TeeTime[i].Date} at #{TeeTime[i].Time}#{hourOfDay}
+                    p On #{TeeTime[i].Date} at #{TeeTime[i].Time}#{hourOfDay}
                 - }
                 p
                     a(href="/tee-times") Book a Tee Time
