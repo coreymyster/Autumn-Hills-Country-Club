@@ -14,13 +14,13 @@ function createTeeTime(req, res) {
      console.log(UserID)
      db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
          if(err) {
-             res.send("User does not exist");
+             res.send("An error occured, please try again.");
          } else {
-             getTeeTimesService(req, res, UserID);
-             res.redirect('/dashboard');
-             //);
+            getTeeTimesService(req, res, UserID);
+
          }
      });
+     //return response.send(request.body);*/
 }
 
 module.exports = createTeeTime;

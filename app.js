@@ -4,6 +4,8 @@ const db = require('./services/dbconnection-service')
 const createAccountService = require('./services/createAccountService');
 const loginService = require('./services/loginService');
 const getTeeTimesService = require('./services/getTeeTimesService');
+const createTeeTimeService = require('./services/createTeeTimeService');
+
 const port = process.env.PORT || 3000;
 
 
@@ -145,22 +147,7 @@ app.post('/dashboard', (req, res) => {
  });
 
  app.post('/tee-time-confirmation', (req, res) => {
-    let TTID = '';
-    let UserID = req.app.get("ID"); 
-    let date = req.body.date
-     let time = req.body.time
-     let Email = req.app.get("Email");
-     let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?, ?)";
-     console.log(UserID)
-     db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
-         if(err) {
-             res.send("User does not exist");
-         } else {
-            getTeeTimesService(req, res, UserID);
-
-         }
-     });
-     //return response.send(request.body);*/
+    createTeeTimeService(req, res);
  });
 
 app.listen(port, () => {
