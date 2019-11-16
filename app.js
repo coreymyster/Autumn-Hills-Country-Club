@@ -29,8 +29,16 @@ app.get('/dashboard', (req, res) => {
     ID = req.app.get("ID");
     FirstName = req.app.get("FirstName");
     Email = req.app.get("Email");
-    TTDate = req.app.get("TTDate");
-    TTTime = req.app.get("TTTime");
+    TeeTime = req.app.get("TeeTime");
+
+    /*let hourOfDay = "time";
+
+    if(TTTime >= 12) {
+        hourOfDay = "PM";
+    } else {
+        hourOfDay = "AM";
+    }*/
+
     return res.render('dashboard');
 });
 

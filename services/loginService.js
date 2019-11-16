@@ -4,9 +4,6 @@ const getTeeTimesService = require('./getTeeTimesService');
 
 db;
 
-let d = new Date();
-let hours = d.getHours();
-
 function login(req, res) {
     let email = req.body.email
     let password = req.body.password

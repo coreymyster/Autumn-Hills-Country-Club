@@ -1,16 +1,41 @@
 extends base.pug
 
 block content
-
+    
     div(class="dashboard")
         p 
             img(src="./images/autumn-hills-logo.svg")
-        h2 Good evening #{FirstName}
+        
+        - let d = new Date();
+        - let hours = d.getHours();
+        - let greeting = "";
+        if hours < 12
+            - greeting = "Morning";
+        else if hours >= 12 && hours < 17
+            - greeting = "Afternoon";
+        else if hours >= 18
+            - greeting = "Evening";
+
+        h2 Good #{greeting} #{FirstName}
         div(class="reservations")
             div(class="teeTimes")
                 h3
                     b Upcoming Tee Times
-                p On #{TTDate} at #{TTTime}
+                - let i;
+                - let hourOfDay = "";
+                - for(i = 0; i < TeeTime.length; i++) {
+                    if TeeTime[i].Time.substring(0, 2) == 12
+                        - hourOfDay = "pm";
+                    else if TeeTime[i].Time.charAt(0) >= 1 && TeeTime[i].Time.charAt(0) <= 5
+                        - hourOfDay = "pm";
+                    else
+                        - hourOfDay = "am";
+                    
+                    if TeeTime[i].Date == "" && TeeTime[i].Time == ""
+                        p No tee times currently scheduled
+                    else
+                        p On #{TeeTime[i].Date} at #{TeeTime[i].Time}#{hourOfDay}
+                - }
                 p
                     a(href="/tee-times") Book a Tee Time
             //div(class="restaurant")
