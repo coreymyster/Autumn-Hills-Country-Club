@@ -111,6 +111,49 @@ input[type="submit"] {
   font-size: 16px;
 }
 /* ------ END CREATE ACCOUNT FORM ------ */
+/* -------- BEGIN DASHBOARD PAGE -------- */
+.dashboard {
+  font-family: 'Hind', sans-serif;
+  position: relative;
+  text-align: center;
+}
+.dashboard img {
+  width: 65%;
+}
+.dashboard h2 {
+  padding: 50px 0 0 0;
+  font-size: 28px;
+  color: #8a8c42;
+}
+.dashboard .reservations {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+}
+.dashboard .reservations .teeTimes,
+.dashboard .reservations .restaurant {
+  border-radius: 10px;
+  border-width: 2px;
+  padding: 10px 20px;
+  margin: 30px;
+  border-style: solid;
+  border-color: #4c6473;
+  font-size: 16px;
+}
+.dashboard .reservations .teeTimes h3,
+.dashboard .reservations .restaurant h3 {
+  color: #4c6473;
+  padding: 10px 0;
+}
+.dashboard .reservations .teeTimes p,
+.dashboard .reservations .restaurant p {
+  padding: 5px 0;
+}
+.dashboard .reservations .teeTimes p a,
+.dashboard .reservations .restaurant p a {
+  color: #4c6473;
+}
+/* -------- BEGIN DASHBOARD PAGE -------- */
 @media only screen and (min-width: 768px) {
   /* ----------- BEGIN LOGIN FORM ----------- */
   .login-wrapper {
@@ -135,6 +178,24 @@ input[type="submit"] {
     padding: 0 80px 0 10px;
   }
   /* ------ END CREATE ACCOUNT FORM ------ */
+  /* -------- BEGIN DASHBOARD PAGE -------- */
+  .dashboard {
+    left: 5%;
+    text-align: left;
+  }
+  .dashboard img {
+    width: 35%;
+  }
+  .dashboard h2 {
+    padding: 100px 0 0 40px;
+    font-size: 32px;
+  }
+  .dashboard .reservations {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 90%;
+  }
+  /* -------- BEGIN DASHBOARD PAGE -------- */
 }
 @media only screen and (min-width: 1020px) {
   /* ----------- BEGIN LOGIN FORM ----------- */
@@ -190,45 +251,12 @@ input[type="submit"] {
   /* -------- BEGIN DASHBOARD PAGE -------- */
   .dashboard {
     left: 10%;
-    font-family: 'Hind', sans-serif;
-    position: relative;
   }
   .dashboard img {
     width: 25%;
   }
-  .dashboard h2 {
-    padding: 100px 0 0 40px;
-    font-size: 28px;
-    color: #8a8c42;
-  }
   .dashboard .reservations {
-    display: grid;
-    grid-template-columns: 50% 50%;
     width: 80%;
-  }
-  .dashboard .reservations .teeTimes,
-  .dashboard .reservations .restaurant {
-    border-radius: 10px;
-    border-width: 2px;
-    padding: 10px 20px;
-    margin: 30px;
-    height: 250px;
-    border-style: solid;
-    border-color: #4c6473;
-    font-size: 16px;
-  }
-  .dashboard .reservations .teeTimes h3,
-  .dashboard .reservations .restaurant h3 {
-    color: #4c6473;
-    padding: 10px 0;
-  }
-  .dashboard .reservations .teeTimes p,
-  .dashboard .reservations .restaurant p {
-    padding: 5px 0;
-  }
-  .dashboard .reservations .teeTimes p a,
-  .dashboard .reservations .restaurant p a {
-    color: #4c6473;
   }
   /* -------- BEGIN DASHBOARD PAGE -------- */
 }

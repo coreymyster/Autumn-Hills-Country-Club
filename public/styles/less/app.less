@@ -155,6 +155,58 @@ input[type="submit"] {
 /* ------ END CREATE ACCOUNT FORM ------ */
 
 
+/* -------- BEGIN DASHBOARD PAGE -------- */
+
+.dashboard {
+    font-family: @font;
+    position: relative;
+    text-align: center;
+        img {
+            width: 65%;
+        }
+
+        h2 {
+            padding: 50px 0 0 0;
+            font-size: 28px;
+            color: @green;
+        }
+
+        .reservations {
+            display: grid;
+            grid-template-columns: 100%;
+            width: 100%;
+            
+
+            .teeTimes, .restaurant {
+                border-radius: 10px;
+                border-width: 2px;
+                padding: 10px 20px;
+                margin: 30px;
+                //height: 250px;
+                border-style: solid;
+                border-color: @blue-acccent;
+                font-size: 16px;
+
+                h3 {
+                    color: @blue-acccent;
+                    padding: 10px 0;
+                }
+
+                
+                p {
+                    padding: 5px 0;
+
+                    a {
+                        color: @blue-acccent;
+                    }
+                }
+            }
+        }
+}
+
+/* -------- BEGIN DASHBOARD PAGE -------- */
+
+
 
 // END MOBILE VIEW
 
@@ -209,6 +261,31 @@ input[type="submit"] {
 
 
 /* ------ END CREATE ACCOUNT FORM ------ */
+
+
+
+/* -------- BEGIN DASHBOARD PAGE -------- */
+
+.dashboard {
+    left: 5%;
+    text-align: left;
+        img {
+            width: 35%;
+        }
+
+        h2 {
+            padding: 100px 0 0 40px;
+            font-size: 32px;
+        }
+
+        .reservations {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 90%;
+        }
+}
+
+/* -------- BEGIN DASHBOARD PAGE -------- */
 
 
 
@@ -310,48 +387,12 @@ input[type="submit"] {
 
 .dashboard {
     left: 10%;
-    font-family: @font;
-    position: relative;
         img {
             width: 25%;
         }
 
-        h2 {
-            padding: 100px 0 0 40px;
-            font-size: 28px;
-            color: @green;
-        }
-
         .reservations {
-            display: grid;
-            grid-template-columns: 50% 50%;
             width: 80%;
-            
-
-            .teeTimes,.restaurant {
-                border-radius: 10px;
-                border-width: 2px;
-                padding: 10px 20px;
-                margin: 30px;
-                height: 250px;
-                border-style: solid;
-                border-color: @blue-acccent;
-                font-size: 16px;
-
-                h3 {
-                    color: @blue-acccent;
-                    padding: 10px 0;
-                }
-
-                
-                p {
-                    padding: 5px 0;
-
-                    a {
-                        color: @blue-acccent;
-                    }
-                }
-            }
         }
 }
 
