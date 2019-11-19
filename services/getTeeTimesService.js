@@ -1,6 +1,6 @@
 const db = require('./dbconnection-service');
 
-db;
+db;     // Calls db service to establish a connection with the database
 
 
 function getTeeTimes(req, res, UserID) {

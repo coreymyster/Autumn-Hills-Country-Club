@@ -1,7 +1,11 @@
 const db = require('./dbconnection-service');
 
-db;
 
+db;     // Calls db service to establish database connection
+
+// Function for when a user creates an account on the 'create-account' page.
+// A request is sent to the corresponding page template and the request results 
+// are stored in variables.
 function createAcount(req, res) {
     let id = ''
     let fname = req.body.first
@@ -12,7 +16,11 @@ function createAcount(req, res) {
     let state = req.body.state
     let password = req.body.password
     let sql = "INSERT INTO UserStore VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    
+    // Queries the values above and stores them into the UserStore table of the database
     db.query(sql, [id, fname, lname, email, address, city, state, password], (err, result) => {
+        
+        // Whether the query is a success or if it fails, an HTML response is returned
         if(err) {
             res.send(`
             <!DOCTYPE html>

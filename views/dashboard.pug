@@ -6,6 +6,8 @@ block content
         p 
             img(src="./images/autumn-hills-logo.svg")
         
+        // The statement below determines the time of day. The time of day 
+        // depends on the greeting the user receives
         - let d = new Date();
         - let hours = d.getHours();
         - let greeting = "";
@@ -21,6 +23,8 @@ block content
             div(class="teeTimes")
                 h3
                     b Upcoming Tee Times
+                // The conditionals below will check the tee times that were queried from the
+                // getTeeTimeService and append 'am' or 'pm' to them.
                 - let i;
                 - let hourOfDay = "";
                 - for(i = 0; i < TeeTime.length; i++) {
