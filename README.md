@@ -18,3 +18,7 @@ Navigate to either of the following:
 - `localhost:3000`
 - `localhost:3000/create-account`
 - `localhost:3000/login`
+
+You may choose to create an account and test the app with that account, or you can simply log in with the following test user named John Doe:
+- `doe@mail.com`
+- `doedoe`
