@@ -259,4 +259,61 @@ input[type="submit"] {
     width: 80%;
   }
   /* -------- BEGIN DASHBOARD PAGE -------- */
+  /* -------- BEGIN TEE TIMES PAGE -------- */
+  .tee-time-wrapper {
+    left: 35%;
+    top: 10%;
+    font-family: 'Hind', sans-serif;
+    position: absolute;
+  }
+  .tee-time-wrapper h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #8a8c42;
+  }
+  .tee-time-wrapper p {
+    text-align: center;
+  }
+  .tee-time-wrapper p img {
+    width: 70%;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper {
+    padding: 20px 0;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form h3 {
+    text-align: center;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form input[type="date"],
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form input[type="time"] {
+    width: 80%;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #f2e6d8;
+    font-size: 18px;
+    font-family: 'Hind', sans-serif;
+    text-align: center;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form input[type="submit"] {
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px 35px;
+    margin-top: 40px;
+    border-style: solid;
+    background: #4c6473;
+    color: #f2e6d8;
+    border-color: #f2e6d8;
+    font-size: 16px;
+    width: 200%;
+  }
+  .tee-time-wrapper .createTeeTimeWrapper .createTeeTime form .reservations {
+    width: 80%;
+  }
+  /* -------- BEGIN DASHBOARD PAGE -------- */
 }

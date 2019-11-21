@@ -2,13 +2,18 @@ extends base.pug
 
 block content
     div(class="tee-time-wrapper")
-        div(class="tee-times")
-            form(action="/tee-time-confirmation", method="post")
-                p Date
-                    br
-                    input(type="date", name="date")
-                p Time 
-                    br
-                    input(type="time", name="time" step="900" min="08:00:00" max="15:00:00")
-        
-                input(type="submit", name="Register" value="Register")
+        p 
+            img(src="./images/autumn-hills-logo.svg")
+        h2 Book a Tee Time
+        p Book your next round with us by selecting a date and time below.
+        div(class="createTeeTimeWrapper")
+            div(class="createTeeTime")
+                form(action="/tee-time-confirmation", method="post")
+                    h3 Date
+                        br
+                        input(type="date", name="date" height="30px")
+                    h3 Time 
+                        br
+                        input(type="time", name="time" step="900" min="08:00:00" max="15:00:00")
+                    
+                    input(type="submit", name="Register" value="Book Tee Time")
