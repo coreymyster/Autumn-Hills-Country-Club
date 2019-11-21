@@ -208,6 +208,79 @@ input[type="submit"] {
 
 
 
+/* -------- BEGIN TEE TIMES PAGE -------- */
+
+.tee-time-wrapper {
+    left: 5%;
+    top: 3%;
+    font-family: @font;
+    position: absolute;
+    width: 90%;
+
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        color: @green;
+
+    }
+
+    p {
+        text-align: center;
+        
+        img {
+            width: 70%;
+        }
+    }
+
+    .createTeeTimeWrapper {
+        padding: 20px 0;
+        .createTeeTime {
+            form {
+                display: grid;
+                grid-template-columns: 100%;
+                width: 100%;
+
+                h3 {
+                    text-align: center
+                }
+
+                input[type="date"], input[type="time"] {
+                    width: 80%;
+                    padding: 10px 5px;
+                    border-radius: 10px;
+                    border-width: 3px;
+                    border-style: solid;
+                    border-color: @offWhite;
+                    font-size: 18px;
+                    font-family: @font;
+                    text-align: center;
+                }
+                
+                input[type="submit"] {
+                    border-radius: 10px;
+                    border-width: 3px;
+                    padding: 10px 35px;
+                    margin-top: 40px;
+                    border-style: solid;
+                    background: @blue-acccent;
+                    color: @offWhite;
+                    border-color: @offWhite;
+                    font-size: 16px;
+                    width: 100%;
+                }
+            
+                    .reservations {
+                        width: 80%;
+                    }
+            }
+        }
+    }
+}
+
+/* -------- END TEE TIMES PAGE -------- */
+
+
+
 // END MOBILE VIEW
 
 //
@@ -285,7 +358,35 @@ input[type="submit"] {
         }
 }
 
-/* -------- BEGIN DASHBOARD PAGE -------- */
+/* -------- END DASHBOARD PAGE -------- */
+
+
+
+
+
+/* -------- BEGIN TEE TIMES PAGE -------- */
+
+.tee-time-wrapper {
+    left: 20%;
+    top: 5%;
+    width: 65%;
+
+    .createTeeTimeWrapper {
+        .createTeeTime {
+            form {
+                grid-template-columns: 50% 50%;
+
+                
+                input[type="submit"] {
+                    width: 200%;
+                }
+            }
+        }
+    }
+}
+
+/* -------- END TEE TIMES PAGE -------- */
+
 
 
 
@@ -396,7 +497,7 @@ input[type="submit"] {
         }
 }
 
-/* -------- BEGIN DASHBOARD PAGE -------- */
+/* -------- END DASHBOARD PAGE -------- */
 
 
 
@@ -404,72 +505,12 @@ input[type="submit"] {
 /* -------- BEGIN TEE TIMES PAGE -------- */
 
 .tee-time-wrapper {
-    left: 35%;
-    top: 10%;
-    font-family: @font;
-    position: absolute;
-
-    h2 {
-        text-align: center;
-        font-size: 32px;
-        color: @green;
-
-    }
-
-    p {
-        text-align: center;
-        
-        img {
-            width: 70%;
-        }
-    }
-
-    .createTeeTimeWrapper {
-        padding: 20px 0;
-        .createTeeTime {
-            form {
-                display: grid;
-                grid-template-columns: 50% 50%;
-                width: 100%;
-
-                h3 {
-                    text-align: center
-                }
-
-                input[type="date"], input[type="time"] {
-                    width: 80%;
-                    padding: 10px 5px;
-                    border-radius: 10px;
-                    border-width: 3px;
-                    border-style: solid;
-                    border-color: @offWhite;
-                    font-size: 18px;
-                    font-family: @font;
-                    text-align: center;
-                }
-                
-                input[type="submit"] {
-                    border-radius: 10px;
-                    border-width: 3px;
-                    padding: 10px 35px;
-                    margin-top: 40px;
-                    border-style: solid;
-                    background: @blue-acccent;
-                    color: @offWhite;
-                    border-color: @offWhite;
-                    font-size: 16px;
-                    width: 200%;
-                }
-            
-                    .reservations {
-                        width: 80%;
-                    }
-            }
-        }
-    }
+    left: 26%;
+    top: 6%;
+    width: 45%;
 }
 
-/* -------- BEGIN DASHBOARD PAGE -------- */
+/* -------- END TEE TIMES PAGE -------- */
 
 
 
