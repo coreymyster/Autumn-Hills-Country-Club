@@ -11,11 +11,10 @@ function login(req, res) {
 
     // This query checks that the email address and password entered on the login page exist in the database
     db.query(sql, [email, password], (err, result) => {
-
         // If the email or password don't exist a message is displayed.
         // If they do exist and match up, then we pass the ID, FirstName and Email from the query
-        // to the app so that other services can use them. 
-        if(!result[0]) {
+        // to the app so that other services can use them.  
+        if(!result[0] || (email == "" && password == "")) {
             res.send(`
                 <p>The email or password combination do not match our records. You can try <a href="/login">logging in</a> again.</p>
                 <p>Don't have an account? <a href="/create-account">Create an account</a> for free!</p>
