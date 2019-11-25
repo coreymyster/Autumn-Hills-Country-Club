@@ -18,7 +18,7 @@ function createTeeTime(req, res) {
      
      // The below query inserts the date and time selected by the user and stores it in the database
      db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
-         if(err) {
+         if(err || (date == "" || time == "")) {
              res.send("An error occured, please try again.");
          } else {
             getTeeTimesService(req, res, UserID); // This function is run in order to refresh the tee times a user see's on their dashboard
