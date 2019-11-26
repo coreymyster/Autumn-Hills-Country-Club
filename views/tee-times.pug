@@ -9,6 +9,8 @@ block content
         div(class="createTeeTimeWrapper")
             div(class="createTeeTime")
                 form(action="/tee-time-confirmation", method="post")
+                    
+                    // Gets todays date so that users can't book a tee time prior to today
                     - let today = new Date();
                     - let dd = today.getDate();
                     - let mm = today.getMonth()+1;
@@ -18,6 +20,7 @@ block content
                     if mm < 10
                         - mm='0'+mm
                     - today = yyyy+'-'+mm+'-'+dd;
+                    
                     h3 Date
                         br
                         input(type="date", name="date" height="30px" min=today)

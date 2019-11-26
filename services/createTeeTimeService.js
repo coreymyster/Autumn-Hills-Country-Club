@@ -1,5 +1,6 @@
 const db = require('./dbconnection-service');
 const getTeeTimesService = require('./getTeeTimesService');
+const alert = require('alert-node');
 
 
 db;     // Calls the db service to create a database connection
@@ -16,15 +17,21 @@ function createTeeTime(req, res) {
      let Email = req.app.get("Email");
      let sql = "INSERT INTO TeeTimes VALUES (?, ?, ?, ?, ?)";
      
-     // The below query inserts the date and time selected by the user and stores it in the database
-     db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
-         if(err || (date == "" || time == "")) {
-             res.send("An error occured, please try again.");
-         } else {
+     if(date == "" || time == "") {
+        alert('Both a date and time must be selected.'); 
+        res.redirect('/tee-times');
+        //res.send(`An error occured, please try again.`);
+     } else {
+            // The below query inserts the date and time selected by the user and stores it in the database
+        db.query(sql, [TTID, UserID, date, time, Email], (err, result) => {
+            if(err) {
+            res.send(`An error occured, please try again.`);
+            } else {
             getTeeTimesService(req, res, UserID); // This function is run in order to refresh the tee times a user see's on their dashboard
-         }
-     });
-     //return response.send(request.body);*/
+            }
+        });
+        //return response.send(request.body);*/
+        }
 }
 
 module.exports = createTeeTime;
