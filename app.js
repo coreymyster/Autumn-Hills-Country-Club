@@ -51,6 +51,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/tee-times', (req, res) => {
+    missingDateTime = req.app.get("missingDateTime");
     return res.render('tee-times');
 });
 
