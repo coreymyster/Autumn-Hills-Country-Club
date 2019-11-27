@@ -47,6 +47,7 @@ app.get('/create-account', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
+    userNotAvailable = req.app.get("userNotAvailable");
     return res.render('login');
 });
 

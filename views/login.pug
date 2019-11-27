@@ -6,6 +6,9 @@ block content
             form(action="/dashboard", method="post")
                 p 
                     img(src="./images/autumn-hills-logo.svg")
+                if userNotAvailable != false
+                    p(style="color: red")
+                        em #{userNotAvailable}
                 p Email
                     br
                     input(type="text", name="email" size="50" height="20")
