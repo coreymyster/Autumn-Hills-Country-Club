@@ -22,7 +22,9 @@ function createAcount(req, res) {
         
         // Whether the query is a success or if it fails, an HTML response is returned
         if(err) {
-            res.send(`
+            res.app.set("emailExists", "Email address is already registered"); 
+            res.redirect('/create-account'); 
+            /*res.send(`
             <!DOCTYPE html>
             <head>
                 <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
@@ -31,7 +33,10 @@ function createAcount(req, res) {
                 <img src="./images/autumn-hills-logo.svg"/>
                 <p><a href="/create-account">An error occcured. Please try again.</a></p>
             </div>
-        `);
+        `);*/
+        } else if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password =="") {
+            res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
+            res.redirect('/create-account'); 
         } else {
             res.send(`
                 <!DOCTYPE html>

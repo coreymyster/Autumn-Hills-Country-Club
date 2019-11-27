@@ -43,6 +43,8 @@ app.get('/dashboard', (req, res) => {
 });
 
 app.get('/create-account', (req, res) => {
+    emailExists = req.app.get("emailExists");
+    missingInformation = req.app.get("missingInformation");
     return res.render('create-account');
 });
 

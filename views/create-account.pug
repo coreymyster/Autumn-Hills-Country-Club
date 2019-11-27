@@ -13,6 +13,8 @@ block content
                     br
                     input(type="text", name="last")
                 p Email Address 
+                    span(style="color: red; font-size: 14px") 
+                        em #{emailExists}
                     br
                     input(type="text", name="email")
                 p Address 
@@ -30,3 +32,6 @@ block content
                 p
                 p
                     input(type="submit", name="Done")
+                if missingInformation != false
+                    p(style="color: red")
+                        em #{missingInformation}
