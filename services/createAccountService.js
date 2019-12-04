@@ -17,41 +17,40 @@ function createAcount(req, res) {
     let password = req.body.password
     let sql = "INSERT INTO UserStore VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     
-    // Queries the values above and stores them into the UserStore table of the database
-    db.query(sql, [id, fname, lname, email, address, city, state, password], (err, result) => {
+    if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password == "") {
+        res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
+        res.redirect('/create-account'); 
+    } else {
+        // Queries the values above and stores them into the UserStore table of the database
+        db.query(sql, [id, fname, lname, email, address, city, state, password], (err, result) => {
+            
+            // Whether the query is a success or if it fails, an HTML response is returned
+            if(err) {
+                res.app.set("emailExists", "Error: Email address is already registered"); 
+                res.redirect('/create-account'); 
+            } //else if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password == "") {
+                //res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
+                //res.redirect('/create-account'); 
+            //} 
+            else {
+                res.send(`
+                    <!DOCTYPE html>
+                    <head>
+                        <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
+                    </head>
+                    <div class="acccountCreateMessage">
+                        <img src="./images/autumn-hills-logo.svg"/>
+                        <h1>Thanks for registering!</h1>
+                        <p><a href="/login">Log in to your account.</a></p>
+                    </div>
+                `);
+            }
+        });
         
-        // Whether the query is a success or if it fails, an HTML response is returned
-        if(err) {
-            res.app.set("emailExists", "Email address is already registered"); 
-            res.redirect('/create-account'); 
-            /*res.send(`
-            <!DOCTYPE html>
-            <head>
-                <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
-            </head>
-            <div class="acccountCreateMessage">
-                <img src="./images/autumn-hills-logo.svg"/>
-                <p><a href="/create-account">An error occcured. Please try again.</a></p>
-            </div>
-        `);*/
-        } else if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password =="") {
-            res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
-            res.redirect('/create-account'); 
-        } else {
-            res.send(`
-                <!DOCTYPE html>
-                <head>
-                    <link rel="stylesheet" type="text/css" href="./styles/css/app.css">
-                </head>
-                <div class="acccountCreateMessage">
-                    <img src="./images/autumn-hills-logo.svg"/>
-                    <h1>Thanks for registering!</h1>
-                    <p><a href="/login">Log in to your account.</a></p>
-                </div>
-            `);
-        }
-    });
-    //return response.send(request.body);
-}
+        res.app.disable("emailExists")
+        res.app.disable("missingInformation")
+        //return response.send(request.body);
+    }
+    }
 
 module.exports = createAcount;

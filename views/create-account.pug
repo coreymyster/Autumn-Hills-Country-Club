@@ -13,8 +13,9 @@ block content
                     br
                     input(type="text", name="last")
                 p Email Address 
-                    span(style="color: red; font-size: 14px") 
-                        em #{emailExists}
+                    if emailExists != false
+                        span(style="color: red; font-size: 14px") 
+                            em #{emailExists}
                     br
                     input(type="text", name="email")
                 p Address 

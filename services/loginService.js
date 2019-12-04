@@ -21,7 +21,7 @@ function login(req, res) {
                 res.app.set("ID", result[0].UserID);
                 res.app.set("FirstName", result[0].FirstName);  
                 res.app.set("Email", result[0].Email);
-                res.app.disable("userNotAvailable")
+                res.app.disable("userNotAvailable");
                 getTeeTimesService(req, res, result[0].UserID); // This service will gather the tee times associated with the user in the daatabse
             }
         });
