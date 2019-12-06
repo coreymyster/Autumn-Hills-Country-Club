@@ -45,12 +45,11 @@ function createAcount(req, res) {
                     </div>
                 `);
             }
-        });
-        
+        }); 
         res.app.disable("emailExists")
         res.app.disable("missingInformation")
         //return response.send(request.body);
-    }
+        }
     }
 
 module.exports = createAcount;

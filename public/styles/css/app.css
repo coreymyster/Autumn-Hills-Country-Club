@@ -1,3 +1,6 @@
+body {
+  margin: 0;
+}
 /* ----------- BEGIN LOGIN FORM ----------- */
 .login-wrapper {
   text-align: center;
@@ -341,12 +344,101 @@ input[type="submit"] {
   }
   /* -------- END TEE TIMES PAGE -------- */
   /* -------- BEGIN HOME PAGE -------- */
+  .navigation {
+    background-color: #FFFFFF;
+    height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+  }
+  .navigation img {
+    width: 5%;
+    left: 5%;
+    position: absolute;
+  }
+  .navigation button {
+    float: right;
+    margin: 15px 50px 0 0;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px 35px;
+    border-style: solid;
+    background: #4c6473;
+    color: #f2e6d8;
+    border-color: #f2e6d8;
+    font-size: 16px;
+  }
+  .navigation button a {
+    text-decoration: none;
+    color: #f2e6d8;
+  }
   .hero {
     background-image: url("./images/autumn-hills-background.jpg");
-    background-size: cover;
+    /* Set rules to fill background */
+    min-height: 80%;
+    min-width: 1024px;
+    padding: 0;
+    margin: 0;
+    /* Set up proportionate scaling */
     width: 100%;
-    height: 500px;
-    background-repeat: no-repeat;
+    height: auto;
+    /* Set up positioning */
+    top: 0;
+    left: 0;
+    background-size: cover;
+    z-index: -1;
+  }
+  .hero img {
+    text-align: center;
+    width: 40%;
+    padding: 125px 0 80px 425px;
+  }
+  .content h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #54592e;
+    font-size: 40px;
+  }
+  .description {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+  }
+  .description p {
+    padding: 20px 0 0 100px;
+    font-family: 'Hind', sans-serif;
+  }
+  .description img {
+    width: 80%;
+  }
+  .callout {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  .callout h2 {
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    padding: 40px 0;
+    color: #54592e;
+    font-size: 30px;
+  }
+  .callout button {
+    text-align: center;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border-width: 3px;
+    padding: 10px 35px;
+    border-style: solid;
+    background: #4c6473;
+    color: #f2e6d8;
+    border-color: #f2e6d8;
+    font-size: 16px;
+  }
+  .callout button a {
+    text-decoration: none;
+    color: #f2e6d8;
   }
   /* -------- END HOME PAGE -------- */
 }
