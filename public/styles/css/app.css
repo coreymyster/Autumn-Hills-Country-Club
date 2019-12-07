@@ -312,6 +312,17 @@ input[type="submit"] {
   text-decoration: none;
   color: #f2e6d8;
 }
+.footer {
+  text-align: center;
+  background-color: #8a8c42;
+  padding: 10px 0;
+  font-family: 'Hind', sans-serif;
+  color: #f2e6d8;
+  font-size: 18px;
+}
+.footer img {
+  width: 20%;
+}
 /* -------- END HOME PAGE -------- */
 @media only screen and (min-width: 768px) {
   /* ----------- BEGIN LOGIN FORM ----------- */

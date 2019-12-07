@@ -20,3 +20,9 @@ block content
                 h2 Create Your Free Account and Join Today!
                 button 
                     a(href="/create-account") Create Account
+        footer
+            div(class="footer")
+                - let date = new Date();
+                - let year = date.getFullYear();
+                p #{year} Autumn Hills
+                img(src="./images/autumn-hills-logo.svg")
