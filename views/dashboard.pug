@@ -45,7 +45,7 @@ block content
                     else
                         - currentDate = parseInt(d.getFullYear().toString() + (d.getMonth() + 1).toString() + d.getDate().toString())
                     
-                    if scheduledTime > currentDate
+                    if scheduledTime >= currentDate
                         p #{TeeTime[i].Date.substring(5, 7)}/#{TeeTime[i].Date.substring(8, 10)}/#{TeeTime[i].Date.substring(0, 4)} at #{TeeTime[i].Time}#{hourOfDay}
                 - }
                 p
