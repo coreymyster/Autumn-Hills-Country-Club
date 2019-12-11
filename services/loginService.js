@@ -25,7 +25,6 @@ function login(req, res) {
                 getTeeTimesService(req, res, result[0].UserID); // This service will gather the tee times associated with the user in the daatabse
             }
         });
-        //return response.send(request.body);
 }
 
 module.exports = login;

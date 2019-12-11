@@ -17,6 +17,8 @@ function createAcount(req, res) {
     let password = req.body.password
     let sql = "INSERT INTO UserStore VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     
+    // If information is missing in any fields then throw an error
+    // and cancel the DB INSERT.
     if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password == "") {
         res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
         res.redirect('/create-account'); 
@@ -24,14 +26,13 @@ function createAcount(req, res) {
         // Queries the values above and stores them into the UserStore table of the database
         db.query(sql, [id, fname, lname, email, address, city, state, password], (err, result) => {
             
-            // Whether the query is a success or if it fails, an HTML response is returned
+            // Email is a unique value in the DB. If it already exists an
+            // error will be thrown.
             if(err) {
                 res.app.set("emailExists", "Error: Email address is already registered"); 
                 res.redirect('/create-account'); 
-            } //else if (fname == "" || lname == "" || email == "" || address == "" || city =="" || state == "" || password == "") {
-                //res.app.set("missingInformation", "There is information missing. Please fill out all fields."); 
-                //res.redirect('/create-account'); 
-            //} 
+            } 
+            // If all is successful, then a simple HTML response is passed
             else {
                 res.send(`
                     <!DOCTYPE html>
@@ -48,7 +49,6 @@ function createAcount(req, res) {
         }); 
         res.app.disable("emailExists")
         res.app.disable("missingInformation")
-        //return response.send(request.body);
         }
     }
 

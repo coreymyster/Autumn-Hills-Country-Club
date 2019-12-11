@@ -36,15 +36,21 @@ block content
                         - hourOfDay = "pm";
                     else
                         - hourOfDay = "am";
-                   
+                    
+                    // We need to check if the tee time date has passed here
+                    // Two variables are set; one to get the scheduled time and the other to get the current date
                     - let scheduledTime = parseInt(TeeTime[i].Date.substring(0, 4).toString() + TeeTime[i].Date.substring(5, 7).toString() + TeeTime[i].Date.substring(8, 10).toString())
                     - let currentDate = ""
 
+                    // JavaScript does not provide dates less than 10 eith a zero in front
+                    // whereas SQL does. This hack just adds a zero in front of dates that are less than 10.
+                    // This way we can compare the JS date to the SQL date.
                     if d.getDate() < 10
                         - currentDate = parseInt(d.getFullYear().toString() + (d.getMonth() + 1).toString() + ('0' + (d.getDate().toString())))
                     else
                         - currentDate = parseInt(d.getFullYear().toString() + (d.getMonth() + 1).toString() + d.getDate().toString())
                     
+                    // Finally we do not display the dates anymore if the date has passed
                     if scheduledTime >= currentDate
                         p #{TeeTime[i].Date.substring(5, 7)}/#{TeeTime[i].Date.substring(8, 10)}/#{TeeTime[i].Date.substring(0, 4)} at #{TeeTime[i].Time}#{hourOfDay}
                 - }
