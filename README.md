@@ -3,7 +3,7 @@ This is the application for the fictional country club "Autumn Hills" designed b
 
 The application is hosted through Elastic Beanstalk in AWS, with a MySQL Database set up through Amazon RDS. The cloud based application is accessible here:
 
-[Home page](http://autumnhills-env.2fpu4vm3xj.us-east-1.elasticbeanstalk.com/)
+[Home page](http://autumnhills-env.eba-ze2zkbv6.us-east-1.elasticbeanstalk.com/)
 
 If you choose to clone this repo take the following steps after cloning:
 
