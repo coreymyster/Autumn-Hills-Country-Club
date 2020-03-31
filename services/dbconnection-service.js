@@ -4,9 +4,9 @@ const mysql = require('mysql');
 // This service simply establishes a connection with the database
 
 const db = mysql.createConnection({
-    host: "autumnhills.cunkfxivmglm.us-east-1.rds.amazonaws.com",
-    user: "phpMyAdmin",
-    password: "phpMyAdmin",
+    host: "autumnhills.cpccpxlw4fji.us-east-1.rds.amazonaws.com",
+    user: "admin",
+    password: "ah-dbadmin",
     database: "AutumnHills",
     multipleStatements: true
 })
